@@ -49,7 +49,7 @@ export default function CTASection({ onOpenMockupForm }: CTASectionProps) {
               </button>
 
               <a
-                href="mailto:hello@sitespike.agency"
+                href="mailto:spike@sitespike.online"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-base font-semibold text-slate-200 bg-[#0F172A] hover:bg-[#1E293B] border border-[#334155] hover:border-[#10B981] transition-all font-heading"
               >
                 <Mail className="w-5 h-5 text-[#06B6D4]" />

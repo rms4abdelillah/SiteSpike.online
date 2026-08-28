@@ -46,50 +46,50 @@ export default function ContactSection({ prefilledService, prefilledPlan }: Cont
   }, [prefilledPlan]);
 
   const SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbyXwjTaQfM7ri7CGuRVQMuwKZeYrz7tVkCPmFUECGfEGVarZiKA4EkmLITjbPyECrumJw/exec';
+    'https://script.google.com/macros/s/AKfycbz8SNT2aI7Z9PONIsdhRJrjT6J5b8mzaVDowdXEYSP08mOTqtJhJbvS-FHJVBN0Cnh8Cg/exec';
 
-const handleSubmit = async (e: FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  const payload = {
-    fullName: formData.name,
-    email: formData.email,
-    businessName: formData.business,
-    industry: formData.industry,
-    websiteSolution: formData.service,
-    budget: formData.budget,
-    referenceSites: formData.references,
-    goals: formData.message,
-    preferredTimeline: formData.preferredTimeline,
-    source: window.location.href,
+    const payload = {
+      fullName: formData.name,
+      email: formData.email,
+      businessName: formData.business,
+      industry: formData.industry,
+      websiteSolution: formData.service,
+      budget: formData.budget,
+      referenceSites: formData.references,
+      goals: formData.message,
+      preferredTimeline: formData.preferredTimeline,
+      source: window.location.href,
+    };
+
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const randomTicketId = `SSPK-${Math.floor(100000 + Math.random() * 900000)}`;
+      setSubmittedTicket({
+        id: randomTicketId,
+        submittedAt: new Date().toLocaleTimeString([], {
+          hour: '2-digit',
+          minute: '2-digit',
+        }),
+        data: { ...formData },
+      });
+    } catch (error) {
+      alert('Something went wrong while sending your request. Please try again or email spike@sitespike.online');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
-
-  try {
-    await fetch(SCRIPT_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(payload),
-    });
-
-    const randomTicketId = `SSPK-${Math.floor(100000 + Math.random() * 900000)}`;
-    setSubmittedTicket({
-      id: randomTicketId,
-      submittedAt: new Date().toLocaleTimeString([], {
-        hour: '2-digit',
-        minute: '2-digit',
-      }),
-      data: { ...formData },
-    });
-  } catch (error) {
-    alert('Something went wrong while sending your request. Please try again or email hello@sitespike.agency');
-  } finally {
-    setIsSubmitting(false);
-  }
-};
 
   const handleCopyTicket = () => {
     if (!submittedTicket) return;
@@ -157,7 +157,7 @@ const handleSubmit = async (e: FormEvent) => {
                   </div>
                   <div>
                     <div className="text-xs font-semibold text-slate-400">Direct Design Inbox</div>
-                    <div className="text-sm font-bold text-white font-heading">hello@sitespike.agency</div>
+                    <div className="text-sm font-bold text-white font-heading">spike@sitespike.online</div>
                   </div>
                 </div>
 

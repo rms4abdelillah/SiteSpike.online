@@ -112,8 +112,8 @@ export default function Footer() {
             </a>
             <div className="pt-2 text-xs">
               <span className="text-slate-400 block">Direct Inquiries:</span>
-              <a href="mailto:hello@sitespike.agency" className="text-[#10B981] hover:text-[#06B6D4] font-mono transition-colors font-semibold">
-                hello@sitespike.agency
+              <a href="mailto:spike@sitespike.online" className="text-[#10B981] hover:text-[#06B6D4] font-mono transition-colors font-semibold">
+                spike@sitespike.online
               </a>
             </div>
           </div>

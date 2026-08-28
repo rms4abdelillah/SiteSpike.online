@@ -115,11 +115,11 @@ export default function FAQSection() {
             </p>
           </div>
           <a
-            href="mailto:hello@sitespike.agency"
+            href="mailto:spike@sitespike.online"
             className="px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-white bg-[#1E293B] hover:bg-[#10B981] hover:text-slate-950 border border-[#334155] hover:border-[#10B981] transition-all flex items-center gap-2 shrink-0 font-heading"
           >
             <Mail className="w-4 h-4 text-[#10B981]" />
-            <span>hello@sitespike.agency</span>
+            <span>spike@sitespike.online</span>
           </a>
         </div>
 
