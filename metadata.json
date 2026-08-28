@@ -1,0 +1,6 @@
+{
+  "name": "SiteSpike",
+  "description": "SiteSpike is a modern web design and digital growth agency. We build stunning websites, powerful brands, and data-driven strategies that help businesses grow.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
