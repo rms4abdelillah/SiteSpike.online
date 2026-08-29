@@ -22,7 +22,7 @@ export default function TestimonialsSection() {
           </h2>
 
           <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-            From Texas restaurateurs to California dental practices and Colorado athletic clubs, see how our zero-call email workflow delivers outsized results.
+            From tech companies and creative studios to healthcare practices and growing brands, see how our zero-call email workflow delivers outsized results.
           </p>
         </div>
 
